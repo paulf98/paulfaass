@@ -1,9 +1,13 @@
 ---
+import Hero from '../../components/react/Hero';
 import Base from '../../layouts/Base.astro';
 ---
 
 <Base>
 	<main>
-		<h1>🧑‍🚀 Hello, Astronaut!</h1>
+		<Hero
+			description='Creating simple and pretty user interactions.'
+			client:load
+		/>
 	</main>
 </Base>

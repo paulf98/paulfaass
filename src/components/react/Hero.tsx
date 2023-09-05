@@ -1,7 +1,7 @@
 import Paul from '../../assets/paul.jpg';
 import { motion } from 'framer-motion';
 
-export default function Hero() {
+export default function Hero({ description }: { description: string }) {
 	return (
 		<div className='flex flex-wrap w-full md:flex-nowrap gap-8 md:justify-between justify-start pb-16'>
 			<div className='flex w-full lg:max-w-3xl items-start justify-start pr-16 sm:pr-40 md:pr-0'>
@@ -35,7 +35,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 100 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 1.5, type: 'spring', stiffness: 100 }}>
-					Beschreibung
+					{description}
 				</motion.p>
 			</div>
 		</div>

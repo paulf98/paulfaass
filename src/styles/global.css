@@ -1,0 +1,7 @@
+:root {
+	font-family: Raleway, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.dark {
+	@apply bg-gray-950 text-gray-200;
+}
