@@ -12,15 +12,6 @@ export type Routes = {
 	};
 };
 
-export const routes: Routes = {
-	de: {
-		about: 'about',
-	},
-	en: {
-		about: 'about',
-	},
-};
-
 export const ui = {
 	en: {
 		'nav.home': 'Home',

@@ -3,7 +3,6 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
 
 const { slug, lang } = Astro.params;
-console.log(slug, lang);
 
 const posts = await getCollection('blog');
 const page = posts.find((page) => page.slug === `${lang}/${slug}`);
