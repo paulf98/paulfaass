@@ -1,5 +1,4 @@
 ---
-import { SITE_TITLE } from '../consts';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,10 +7,11 @@ const t = useTranslations(lang);
 
 <header>
 	<nav
-		class='fixed w-full flex justify-center gap-8 h-16 items-center bg-gray-900 border-b text-white'>
+		class='fixed w-full flex justify-center gap-8 h-16 items-center bg-gray-980'>
 		<a href={`/${lang}/`}>
 			{t('nav.home')}
 		</a>
 		<a href=`/${lang}/blog/`> Blog</a>
 	</nav>
+	<div class='pt-16'></div>
 </header>
