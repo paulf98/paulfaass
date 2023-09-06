@@ -1,6 +1,7 @@
 ---
 import Hero from '../../components/react/Hero';
 import Timeline from '../../components/react/Timeline';
+import SkillCloud from '../../components/react/SkillCloud';
 import Base from '../../layouts/Base.astro';
 import timeline from './timeline';
 ---
@@ -12,5 +13,9 @@ import timeline from './timeline';
 			description='Ich erstelle einfache und schöne Nutzerinteraktionen.'
 		/>
 		<Timeline client:load timeline={timeline} />
+		<SkillCloud
+			client:load
+			description='Programmiersprachen, Frameworks und Werkezeuge mit denen ich gerne arbeite.'
+		/>
 	</main>
 </Base>
