@@ -1,6 +1,8 @@
 ---
 import Hero from '../../components/react/Hero';
+import Timeline from '../../components/react/Timeline';
 import Base from '../../layouts/Base.astro';
+import timeline from './timeline';
 ---
 
 <Base>
@@ -9,5 +11,6 @@ import Base from '../../layouts/Base.astro';
 			description='Creating simple and pretty user interactions.'
 			client:load
 		/>
+		<Timeline client:load timeline={timeline} />
 	</main>
 </Base>
