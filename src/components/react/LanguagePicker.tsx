@@ -32,7 +32,7 @@ export default function LanguagePicker() {
 	const [showLanguages, setShowLanguages] = React.useState<boolean>(false);
 
 	return (
-		<div className='fixed right-4 bottom-4 md:bottom-auto md:top-4 flex flex-col items-end'>
+		<div className='fixed z-20 right-4 bottom-4 md:bottom-auto md:top-4 flex flex-col items-end'>
 			<button
 				onClick={() => setShowLanguages(!showLanguages)}
 				className='bg-gray-100 text-gray-600 dark:text-gray-200 dark:bg-gray-800 p-2 rounded'>
