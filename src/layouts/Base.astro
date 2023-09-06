@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import LanguagePicker from '../components/react/LanguagePicker';
+import ThemeToggle from '../components/react/ThemeToggle';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -17,10 +18,11 @@ const lang = getLangFromUrl(Astro.url);
 		<title>Paul Faass | Portfolio</title>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class='text-gray-600 dark:text-gray-200 dark:bg-gray-950'>
+	<body class='bg-white text-gray-600 dark:text-gray-200 dark:bg-gray-950'>
 		<Header />
 		<slot />
 		<LanguagePicker client:only />
+		<ThemeToggle client:only />
 		<Footer />
 	</body>
 </html>
