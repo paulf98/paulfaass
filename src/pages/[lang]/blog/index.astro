@@ -11,23 +11,26 @@ const posts = (await getCollection('blog'))
 ---
 
 <Base>
-	<main>
+	<main class='min-h-screen py-16'>
 		<section>
 			<ul>
 				{
 					posts.map((post) => (
-						<li>
+						<li class='mx-auto max-w-prose rounded dark:bg-gray-900 hover:border'>
 							<a href={`/${lang}/blog/${post.slug.split('/')[1]}`}>
 								<img
 									width={720}
 									height={360}
 									src={post.data.heroImage}
 									alt=''
+									class='w-full h-auto rounded-t'
 								/>
-								<h4 class='title'>{post.data.title}</h4>
-								<p class='date'>
-									<FormattedDate date={post.data.pubDate} />
-								</p>
+								<div class='p-4'>
+									<h3 class='text-xl pt-4'>{post.data.title}</h3>
+									<p class='date'>
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</div>
 							</a>
 						</li>
 					))
